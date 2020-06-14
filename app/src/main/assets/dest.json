@@ -1,0 +1,20 @@
+{
+  "dest": [
+    {
+      "id": "1",
+      "name": "Echangadu"
+    },
+    {
+      "id": "2",
+      "name": "Kamatchi Hospital"
+    },
+    {
+      "id": "3",
+      "name": "Thoraipakkam"
+    },
+    {
+      "id": "4",
+      "name": "Thiruvanmiyur"
+    }
+  ]
+}

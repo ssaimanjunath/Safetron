@@ -1,0 +1,28 @@
+
+
+<html>
+<head>
+    <link rel="stylesheet" href="css/design.css"/>  
+    <title>Check</title>  
+      
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body background="">  
+    <div class="inner-container">    
+      <div class="content">    
+        <p>Name : <%= query.username %><br></p>
+        <p>Source : <%= query.source %><br></p>
+        <p>Destination : <%= query.dest %><br></p>
+        <p>Amount : <%= query.amount %><br></p>
+        <p>Number Of Persons : <%= query.number_of_persons %><br><br></p>
+        <button class="check"><a href="/scan" style="color:aliceblue;text-decoration: none;">Check Next Ticket</a></button>
+      </div>
+
+    </div>
+   
+  </body>

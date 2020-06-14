@@ -1,0 +1,30 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/design.css"/>  
+    <title>Check</title>  
+      
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+    
+<body background="">  
+  <div class="inner-container">    
+    <div class="box">     
+      <form action="/check" method="post"><br>
+        <% if(query=="error"){%>
+        <div class="alert alert-danger">invalid Ticket Number</div>
+        <% } else if(query=="error2"){%>
+          <div class="alert alert-danger">invalid QR Code, please enter ticket number</div>
+          <%}%>
+          <input type="text" placeholder="Ticket Number" name="ticket"/>
+          <button type="submit">Check</button>
+          <p>Book Ticket? <a href="/check"><span>Book</span></a></p>
+      </form>
+        
+    </div>
+  </div>
+ 
+</body>

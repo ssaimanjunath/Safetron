@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    tools:context="com.nizhal.i_link.Welcome">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:id="@+id/lin_pro"
+        android:orientation="horizontal"
+        android:background="#eee">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@color/white"
+            android:elevation="10dp"
+            android:layout_gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="85dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/random" />
+
+            <TextView
+                android:id="@+id/doc_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Shyam Sundar"
+                android:textSize="23dp" />
+
+            <TextView
+                android:id="@+id/doc_spec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/doc_name1"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Contact: +91 92802 22456"
+                android:textSize="17dp" />
+
+
+            <TextView
+                android:id="@+id/dummy_tick1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/doc_spec"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/greentick"
+                android:drawablePadding="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="Verified User!"
+                android:textSize="17dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/dummy_tick1"
+                android:layout_below="@+id/dummy_tick1"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_marginTop="5dp"
+                android:text="Saved Location: Pallavaram"
+                android:textSize="17dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/pro_label"
+        android:layout_below="@id/lin_pro">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:text="New Search"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pro_label">
+
+        <TextView
+            android:id="@+id/select_bs_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/source"
+            android:fontFamily="sans-serif-smallcaps"
+            android:padding="10dp"
+            android:text="Nearest Bus Stop"
+            android:textAllCaps="true"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:layout_marginLeft="25dp"
+            android:fontFamily="sans-serif-condensed"
+            android:id="@+id/source"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:hint="Click to Select"
+            android:layout_below="@id/select_bs_label"
+            android:layout_marginRight="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Destination Bus Stop"
+            android:fontFamily="sans-serif-smallcaps"
+            android:id="@+id/select_ds_label"
+            android:layout_marginLeft="25dp"
+            android:padding="10dp"
+            android:textAllCaps="true"
+            android:layout_below="@id/source"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:layout_marginLeft="25dp"
+            android:id="@+id/destn"
+            android:textSize="20dp"
+            android:hint="Click to Select"
+            android:gravity="center"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_below="@id/select_ds_label"
+            android:layout_marginRight="25dp"/>
+
+        <at.markushi.ui.CircleButton
+            android:id="@+id/search"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/destn"
+            android:layout_marginTop="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/ic_search_black_24dp"
+            app:cb_color="@color/colorPrimary" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardViewWelcome"
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="4dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="60"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/calibri"
+                        android:text="Upcoming Journey"
+                        android:textColor="#000000"
+                        android:paddingBottom="5dp"
+                        android:textStyle="bold"
+                        android:textSize="18dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/calibri"
+                        android:text="1:00PM"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/calibri"
+                        android:text="Route Number : 91 V"
+                        android:textColor="#4b4b4b"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/calibri"
+                        android:text="Bus Type : Deluxe"
+                        android:textColor="#8a8a8a" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="40"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/calibri"
+                        android:text="Booked"
+                        android:textAlignment="textEnd"
+                        android:textColor="#f5a622"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/calibri"
+                        android:text="in 45 mins"
+                        android:textAlignment="textEnd"
+                        android:textColor="#b3b3b3" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

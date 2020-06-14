@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nizhal.i_link.MainPage">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Search"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hide Map"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/toggleMap"
+        android:textSize="16dp"
+        android:layout_alignParentRight="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/lin_map"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.nizhal.lynkhacks.TestMaps"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/lin_stat"
+        android:background="#eee"
+        android:visibility="invisible"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Source"
+                android:id="@+id/label_source"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/label_dest"
+                android:text="Destination"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vels University"
+                android:layout_below="@id/label_source"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="sans-serif-condensed"
+                android:id="@+id/main_source"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_dest"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimary"
+                android:text="Thiruvanmiyur"
+                android:id="@+id/main_dest"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bus Number"
+                android:id="@+id/label_bus_no"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_marginTop="75dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="91V Tambaram - Thiruvanmiyur"
+                android:layout_below="@id/label_bus_no"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="sans-serif-condensed"
+                android:id="@+id/main_bus_no"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No of stops"
+                android:id="@+id/label_bus_stops"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_marginTop="140dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13 stops"
+                android:layout_below="@id/label_bus_stops"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="sans-serif-condensed"
+                android:id="@+id/main_bus_stop_no"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/label_travel_time"
+                android:text="Travel Time"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_marginTop="140dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_travel_time"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimary"
+                android:text="35 mins"
+                android:id="@+id/main_travel_time"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/lin_stat"
+        android:layout_marginTop="15dp"
+        android:id="@+id/lin_info"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+
+        <RelativeLayout
+            android:layout_width="115dp"
+            android:layout_height="match_parent"
+            android:background="#eee"
+            android:layout_margin="2dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/crowd"
+                android:elevation="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/crowd_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/crowd_icon"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Moderate"
+                android:textColor="@color/yellow"
+                android:fontFamily="sans-serif-condensed"
+                android:id="@+id/crowd_level"
+                android:textSize="19dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/crowd_level"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Seats Available"
+                android:fontFamily="sans-serif-condensed"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="115dp"
+            android:layout_height="match_parent"
+            android:background="#eee"
+            android:layout_margin="2dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/time"
+                android:elevation="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/approx_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/approx_icon"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="2 mins"
+                android:textColor="#178021"
+                android:fontFamily="sans-serif-condensed"
+                android:id="@+id/aprox_time"
+                android:textSize="19dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aprox_time"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Approx Arrival"
+                android:fontFamily="sans-serif-condensed"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="115dp"
+            android:layout_height="match_parent"
+            android:background="#eee"
+            android:layout_margin="2dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ticket"
+                android:elevation="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/ticket_cost"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ticket_cost"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="₹ 45"
+                android:textColor="@color/redishPink"
+                android:fontFamily="sans-serif-condensed"
+                android:id="@+id/cost_t"
+                android:textSize="19dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cost_t"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Ticket Cost"
+                android:fontFamily="sans-serif-condensed"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/lin_info">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="21"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="40dp"
+                android:id="@+id/speed_bus"
+                android:fontFamily="sans-serif-condensed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seats Avl."
+                android:layout_below="@+id/speed_bus"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="7 mins"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/next_bus"
+                android:layout_marginRight="38dp"
+                android:fontFamily="sans-serif-condensed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:id="@+id/label_next_bus"
+                android:text="Next Bus Timing"
+                android:layout_below="@+id/next_bus"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="10dp"/>
+
+            <com.nizal.ripple.RippleBackground
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ripple_stop"
+                app:rb_color="#ffc7cd"
+                android:layout_centerInParent="true"
+                app:rb_radius="32dp"
+                app:rb_rippleAmount="3"
+                app:rb_duration="5000"
+                app:rb_scale="2">
+
+                <at.markushi.ui.CircleButton
+                    android:id="@+id/bookTicket"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_validating_ticket"
+                    app:cb_color="@color/redishPink" />
+
+            </com.nizal.ripple.RippleBackground>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
